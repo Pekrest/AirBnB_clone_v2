@@ -5,11 +5,13 @@
 from flask import Flask
 
 app = Flask(__name__)
-app.url_map.strict_slashes=False
+app.url_map.strict_slashes = False
 
 @app.route("/")
 def home_hbnb():
-    """Displays 'Hello HBNB!'"""
+    """
+    Displays 'Hello HBNB!'
+    """
     return "Hello HBNB!"
 
 @app.route("/hbnb")
