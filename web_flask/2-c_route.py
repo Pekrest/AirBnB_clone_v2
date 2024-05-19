@@ -7,6 +7,7 @@ from flask import Flask
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
+
 @app.route("/")
 def home_hbnb():
     """
@@ -14,10 +15,12 @@ def home_hbnb():
     """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb")
 def hbnb():
     """Displays 'HBNB'."""
     return "HBNB"
+
 
 @app.route("/c/<text>")
 def c(text):
