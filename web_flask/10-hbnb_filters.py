@@ -9,6 +9,7 @@ from models import storage
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
+
 @app.route("/hbnb_filters")
 def hbnb_filters():
     """
@@ -24,7 +25,6 @@ def hbnb_filters():
 def teardown(exc):
     """Remove the current SQLAlchemy session."""
     storage.close()
-
 
 
 if __name__ == "__main__":
